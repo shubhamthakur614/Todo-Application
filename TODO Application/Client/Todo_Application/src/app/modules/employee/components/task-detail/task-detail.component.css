@@ -1,0 +1,138 @@
+/* Custom styles for the card */
+.card {
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  border: 1px solid #ddd; /* Light border for card */
+  background-color: #fff; /* White background for better contrast */
+}
+
+/* Custom styles for priority badges */
+.badge.priority-high {
+  background-color: #dc3545; /* Red for high priority */
+  color: white;
+  padding: 0.5em 1em; /* Extra padding for a pill-like appearance */
+  border-radius: 12px; /* Rounded badge */
+}
+
+.badge.priority-medium {
+  background-color: #ffc107; /* Yellow for medium priority */
+  color: black;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+}
+
+.badge.priority-low {
+  background-color: #28a745; /* Green for low priority */
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+}
+
+/* Custom styles for task status */
+.status-completed {
+  color: #28a745; /* Green for completed status */
+}
+
+.status-in-progress {
+  color: #ffc107; /* Yellow for in-progress status */
+}
+
+.status-pending {
+  color: #dc3545; /* Red for pending status */
+}
+
+/* Dropdown styling */
+.form-group {
+  margin-top: 1.5rem; /* Increased top margin for spacing */
+}
+
+#statusSelect {
+  border-radius: 12px; /* Rounded corners for dropdown */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  padding: 0.5em 1em; /* Padding for better spacing */
+  background-color: #f8f9fa; /* Light background for dropdown */
+}
+
+/* Custom button styling */
+.btn-outline-primary {
+  border-radius: 12px; /* Rounded corners for button */
+  padding: 0.5em 1.5em; /* Padding for better appearance */
+  font-size: 1rem; /* Larger font size */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+/* Card header and footer enhancements */
+.card-header {
+  border-bottom: 1px solid #ddd; /* Border at the bottom of the header */
+}
+
+.card-footer {
+  border-top: 1px solid #ddd; /* Border at the top of the footer */
+}
+
+/* Comment Section Styles */
+.comment-card {
+  border: 1px solid #ddd; /* Light border for comment card */
+  border-radius: 12px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.comment-card .card-body {
+  padding: 1.5em; /* Increased padding for form */
+}
+
+.comment-card h4 {
+  margin-bottom: 1em; /* Space below heading */
+}
+
+/* Admin Comment Styles */
+.admin-comment {
+  border-left: 5px solid #007bff; /* Blue border for admin comments */
+}
+
+.admin-comment .card-header {
+  background-color: #e9f7ff; /* Light blue background for header */
+}
+
+.admin-comment .fa-user-circle {
+  color: #0056b3; /* Darker blue for admin icon */
+}
+
+.admin-comment .card-body {
+  background-color: #f0f8ff; /* Slightly lighter blue background for body */
+}
+
+/* User Comment Styles */
+.user-comment {
+  border-left: 5px solid #17a2b8; /* Teal border for user comments */
+}
+
+.user-comment .card-header {
+  background-color: #e0f5f8; /* Light teal background for header */
+}
+
+.user-comment .fa-user-circle {
+  color: #117a8b; /* Darker teal for user icon */
+}
+
+.user-comment .card-body {
+  background-color: #f4f9fa; /* Slightly lighter teal background for body */
+}
+
+/* Current User Comment Styles */
+.current-user-comment {
+  border-left: 5px solid #28a745; /* Green border for current user comments */
+}
+
+.current-user-comment .card-header {
+  background-color: #e9ffe6; /* Light green background for header */
+}
+
+.current-user-comment .fa-user-circle {
+  color: #1e7e34; /* Darker green for current user icon */
+}
+
+.current-user-comment .card-body {
+  background-color: #f8fff0; /* Slightly lighter green background for body */
+}

@@ -1,0 +1,25 @@
+<app-navbar/>
+
+<div class="container mt-4">
+  <!-- Task Cards -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let task of taskList">
+      <!-- Card Link -->
+      <a class="task-card-link" [routerLink]="'/employee/taskdetails/' + task.id">
+        <div class="task-card">
+          <div class="task-card-header">
+            <h5 class="task-title">{{ task.title | titlecase }}</h5>
+            <span class="badge priority-{{task.priority.toLowerCase()}}">{{ task.priority }}</span>
+          </div>
+          <div class="task-card-body">
+            <p class="task-description">{{ task.description }}</p>
+            <p><strong>Due Date:</strong> {{ task.dueDate | date:'shortDate' }}</p>
+            <p><strong>Assigned to:</strong> {{ task.employeeName }}</p>
+            <p><strong>Status:</strong> <span class="status-{{task.taskStatus.toLowerCase()}}">{{ task.taskStatus
+                }}</span></p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

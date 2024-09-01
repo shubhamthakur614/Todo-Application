@@ -1,0 +1,78 @@
+<app-navbar/>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title mb-0">{{ task.title | titlecase }}</h4>
+                        <span class="badge priority-{{ task.priority.toLowerCase() }}">
+                            {{ task.priority | titlecase }}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p><strong>Description:</strong> {{ task.description }}</p>
+                    <p><strong>Due Date:</strong> {{ task.dueDate | date:'shortDate' }}</p>
+                    <p><strong>Assigned to:</strong> {{ task.employeeName }}</p>
+                    <p><strong>Status:</strong>
+                        <span [ngClass]="'status-' + task.taskStatus.toLowerCase()">
+                            {{ task.taskStatus | titlecase }}
+                        </span>
+                    </p>
+                    
+                    <!-- Status Slider -->
+                    <div class="status-slider">
+                        <input type="range" min="1" max="4" [value]="statusLevel" class="form-range" disabled>
+                        <div class="status-labels">
+                            <span class="badge status-assign">Assign</span>
+                            <span class="badge status-inprogress">In Progress</span>
+                            <span class="badge status-pending">Pending</span>
+                            <span class="badge status-completed">Completed</span>
+                        </div>
+                    </div>
+  
+                    <!-- Comment Section -->
+                    <div class="comment-card mt-4">
+                        <div class="card-body">
+                            <h4>Publish Your Comment</h4>
+                            <form [formGroup]="commentForm">
+                                <div class="form-group">
+                                    <label for="content">Content</label>
+                                    <textarea id="content" class="form-control" formControlName="content" rows="4"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-2 float-right" [disabled]="!commentForm.valid" (click)="publishComment()">
+                                    <i class="fas fa-paper-plane"></i> Publish Comment
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+  
+                    <!-- Comments List -->
+                    <div class="comments-section mt-4">
+                        <h4>Comments</h4>
+                        <div *ngFor="let comment of commentsList" class="card mb-3">
+                            <div class="card-header d-flex align-items-center">
+                                <i class="fas fa-user-circle fa-2x me-2"></i>
+                                <div>
+                                    <h6 class="mb-0">{{ comment.postedBy }}</h6>
+                                    <small class="text-muted">{{ comment.createdAt | date: 'medium' }}</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                {{ comment.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-outline-primary" (click)="goBack()">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

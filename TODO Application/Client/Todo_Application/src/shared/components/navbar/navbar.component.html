@@ -1,0 +1,57 @@
+<body>
+    <!-- Main navigation bar for public users -->
+    <nav *ngIf="!isAdminLoggedIn && !isEmployeeLoggedIn" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">Todo Application</a>
+        <div class="collapse navbar-collapse justify-content-end">
+          <div class="navbar-buttons">
+            <button routerLink="/signup" routerLinkActive="active" class="btn btn-outline-primary me-2">
+              <i class="fas fa-user-plus"></i> Register
+            </button>
+            <button routerLink="/login" routerLinkActive="active" class="btn btn-outline-info">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Navigation bar for admin users -->
+    <nav *ngIf="isAdminLoggedIn" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/admin/dashboard">Admin </a>
+        <div class="collapse navbar-collapse justify-content-end">
+          <div class="navbar-buttons">
+            <button routerLink="/admin/dashboard" routerLinkActive="active" class="btn btn-outline-primary me-2">
+              <i class="fas fa-tachometer-alt"></i> Dashboard
+            </button>
+            <button routerLink="/admin/task" routerLinkActive="active" class="btn btn-outline-warning me-2">
+              <i class="fas fa-tasks"></i> Post Task
+            </button>
+            <button (click)="logout()" class="btn btn-outline-info">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Navigation bar for employee users -->
+    <nav *ngIf="isEmployeeLoggedIn" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/employee/dashboard">Employee </a>
+        <div class="collapse navbar-collapse justify-content-end">
+          <div class="navbar-buttons">
+            <button routerLink="/employee/dashboard" routerLinkActive="active" class="btn btn-outline-primary me-2">
+              <i class="fas fa-tachometer-alt"></i> Dashboard
+            </button>
+            <button (click)="logout()" class="btn btn-outline-info">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+  </body>
+  

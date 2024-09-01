@@ -1,0 +1,43 @@
+# Angular specific
+/client/node_modules/
+dist/
+build/
+*.log
+
+# Build output
+/client/dist/
+/server/target/
+
+# Spring Boot specific
+target/
+build/
+.mvn/
+*.log
+*.iml
+*.classpath
+*.project
+*.jks
+*.settings/
+*.keystore
+
+
+# IDE specific
+.idea/
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.temp
+*.log

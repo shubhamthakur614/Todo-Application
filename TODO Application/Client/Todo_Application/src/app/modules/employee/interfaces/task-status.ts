@@ -1,0 +1,6 @@
+export enum TaskStatus {
+    ASSIGN='ASSIGN',
+    INPROGRESS='INPROGRESS',
+    PENDING='PENDING',
+    COMPLETED='COMPLETED'
+}
